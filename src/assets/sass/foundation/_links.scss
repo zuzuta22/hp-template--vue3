@@ -1,0 +1,25 @@
+a {
+  $this: &;
+
+  color: var(--color-use-link);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--duration);
+
+  &:link,
+  &:visited {
+      text-decoration: none;
+  }
+
+  &.under {
+      text-decoration: underline;
+
+      &:hover {
+          color: var(--color-use-link-hover);
+      }
+  }
+}
+
+:where(a):hover {
+  color: var(--color-use-link-hover);
+}

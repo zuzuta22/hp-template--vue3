@@ -1,0 +1,94 @@
+@use "variables" as var;
+@use "sass:math";
+
+// ==========================
+// 小数点以下を制御
+// @param $number 数値
+// @return 小数点3桁までで四捨五入
+// ==========================
+@function round_decimal($number) {
+    $syosuten: math.round($number * 1000);
+    $syosuten: math.div($syosuten, 1000);
+    @return $syosuten;
+}
+
+// ==========================
+// rem計算
+// @param $px ピクセルサイズ
+// @return rem化されたフォントサイズ
+// ==========================
+@function rem($px) {
+    @return math.div($px,var.$default_fs) + rem;
+}
+
+// ==========================
+// em計算
+// @param $px ピクセルサイズ
+// @param $base 基準サイズ
+// @return em化されたサイズ
+// ==========================
+@function em($px,$base: var.$default_fs) {
+    $em: math.div($px,$base);
+    $em_fix: round_decimal($em) + em;
+    @return $em_fix;
+}
+
+// ==========================
+// px→vw計算
+// [100 / 基準点 * 基準サイズ = 変化開始vw]
+// @param $px 基準サイズ(最大値:rem)
+// @param $point 基準点(width)
+// @return 値[int]
+// ==========================
+@function px_to_vw($px,$point) {
+    @return math.div(100, $point) * $px;
+}
+
+// ==========================
+// 自動min()（可変マージンなどに）
+// [100 / 基準点 * 基準サイズ = 変化開始vw]
+// @param $size 基準サイズ(最大値:px)
+// @param $point 基準点(width) default:768
+// @param $unit 単位 default:px
+// @return min($vw,$max_size)
+// ==========================
+@function auto_min($size,$point: var.$bp_m,$unit: px) {
+    $vw_num: px_to_vw($size, $point);
+    $vw_val: round_decimal($vw_num) + vw;
+
+    // remかpxか
+    @if $unit == rem {
+        $size: rem($size);
+    } @else {
+        $size: $size + px;
+    }
+
+    @return min($vw_val,$size);
+}
+
+// ==========================
+// 自動clamp()（可変マージンなどに）
+// @param $size_min 最小サイズ(px)
+// @param $size_max 最大サイズ(px)
+// @param $point 基準点(width) default:768
+// @param $unit 単位 default:px
+// @return min($vw,$max_size)
+// ==========================
+@function auto_clamp($size_min,$size_max,$point: var.$bp_m,$unit: px) {
+    $vw_num: px_to_vw($size_max, $point);
+    $vw_val: round_decimal($vw_num) + vw;
+
+    // remかpxか
+    @if $unit == rem {
+        $size_min: rem($size_min);
+        $size_max: rem($size_max);
+    } @else {
+        $size_min: $size_min + px;
+        $size_max: $size_max + px;
+    }
+
+    @return clamp($size_min,$vw_val,$size_max);
+}
+
+
+

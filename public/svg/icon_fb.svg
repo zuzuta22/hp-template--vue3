@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.28 17.65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Guides">
+    <path id="facebook" class="cls-1" d="M8.26,0V2.85s-2.09-.21-2.62,.59c-.29,.44-.12,1.72-.14,2.64h2.78c-.23,1.08-.4,1.81-.58,2.74h-2.22v8.83H1.64c0-2.72,0-5.9,0-8.79H0v-2.78H1.62c.08-2.03,.11-4.04,1.12-5.07C3.88-.13,4.96,0,8.26,0Z"/>
+  </g>
+</svg>
