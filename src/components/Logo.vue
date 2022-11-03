@@ -13,9 +13,14 @@
   min-width: 250px;
   &__sub {
     font-size: 10px;
+
+    @include mq-dn(s) {
+      display: none;
+    }
   }
   &__title {
     font-size: 24px;
+    font-size: clamp(16px, 2.5vw, 24px);
     font-weight: 700;
     line-height: 1.8;
     & span {

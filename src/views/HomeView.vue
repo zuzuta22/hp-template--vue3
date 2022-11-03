@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MainSlider from '../project/home/HomeMainSlider.vue'
+import HomeTopCarousel from '../project/home/HomeTopCarousel.vue'
 import HomeLatest from '../project/home/HomeLatest.vue'
 import HomeService from '../project/home/HomeService.vue'
 import HomeNewItem from '../project/home/HomeNewItem.vue'
@@ -10,7 +10,7 @@ import HomeRecruit from '../project/home/HomeRecruit.vue'
 </script>
 
 <template>
-  <MainSlider />
+  <HomeTopCarousel />
   <HomeLatest />
   <HomeService />
   <HomeNewItem />

@@ -5,17 +5,17 @@ import Footer from '../components/Footer.vue';
 </script>
 
 <template>
-  <main>
+  <div class="l-main-inner">
     <Header />
     <div class="content">
       <RouterView />
     </div>
     <Footer />
-  </main>
+  </div>
 </template>
 
 <style scoped lang="scss">
-  .content {
-    padding: 0 2vw;
-  }
+.l-main-inner {
+  position: relative;
+}
 </style>
