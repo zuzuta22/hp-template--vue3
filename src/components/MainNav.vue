@@ -17,6 +17,8 @@
 
 <style scoped lang="scss">
   .c-MainNavWrapper {
+    display: flex;
+      align-items: center;
     @include mq-dn(s) {
       display: none;
     }

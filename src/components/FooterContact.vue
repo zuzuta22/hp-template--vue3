@@ -2,8 +2,8 @@
   import { ref } from 'vue';
   import ContactArea from './ContactArea.vue';
   
-  import { SystemConst } from '../assets/js/const.ts';
-  
+  import { SystemConst } from '@/assets/js/const.ts';
+
   // 定数読み込み
   const TelInfo = ref(SystemConst.TelInfo);
   const TelLink = ref(SystemConst.telnum_link)
