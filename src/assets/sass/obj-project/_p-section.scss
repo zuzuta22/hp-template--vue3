@@ -1,0 +1,17 @@
+@use "../global/index" as g;
+
+.p-section {
+  padding: 50px 2vw;
+  &--secondary {
+    background: var(--gray-5);
+  }
+  @include g.mq-up(m) {
+    padding: 50px 3vw;
+  }
+  @include g.mq-up(l) {
+    // padding: 50px 5vw;
+  }
+  @include g.mq-up(xl) {
+    padding: 50px 5vw;
+  }
+}

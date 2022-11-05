@@ -1,4 +1,7 @@
 :root {
+  /* max width for display */
+  --max-width: 1980px;
+
   /* main colors */
   --color-primary: #4D84F4;
   --color-primary-light: color-mod(var(--color-primary) tint(15%));
