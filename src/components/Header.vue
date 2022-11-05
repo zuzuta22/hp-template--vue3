@@ -58,9 +58,9 @@
     // スクロールしたら表示させるようにする。
     opacity: .6;
     width: 100%;
+    max-width: var(--max-width);
     position: fixed;
-      top: 0;
-      left: 0;
+    top: 0;
     z-index: 100000;
 
     &__inner {
