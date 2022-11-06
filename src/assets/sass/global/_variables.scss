@@ -33,18 +33,18 @@ $bp_fv: $bp_l + 100;
 // $bp_fv: $bp_l + 100 + $scroll_bar_width;
 
 $breakpoint_up: (
-    "xs": "min-width: #{$bp_xs + 1 + px}",
-    "s": "min-width: #{$bp_s + 1 + px}",
-    "m": "min-width: #{$bp_m + 1 + px}",
-    "l": "min-width: #{$bp_l + 1 + px}",
-    "xl": "min-width: #{$bp_xl + 1 + px}",
+  "xs": "min-width: #{$bp_xs + 1 + px}",
+  "s": "min-width: #{$bp_s + 1 + px}",
+  "m": "min-width: #{$bp_m + 1 + px}",
+  "l": "min-width: #{$bp_l + 1 + px}",
+  "xl": "min-width: #{$bp_xl + 1 + px}",
 ) !default;
 
 $breakpoint_dn: (
-    "xs": "max-width: #{$bp_xs + px}",
-    "s": "max-width: #{$bp_s + px}",
-    "m": "max-width: #{$bp_m + px}",
-    "l": "max-width: #{$bp_l + px}",
-    "xl": "max-width: #{$bp_xl + px}",
+  "xs": "max-width: #{$bp_xs + px}",
+  "s": "max-width: #{$bp_s + px}",
+  "m": "max-width: #{$bp_m + px}",
+  "l": "max-width: #{$bp_l + px}",
+  "xl": "max-width: #{$bp_xl + px}",
 ) !default;
 

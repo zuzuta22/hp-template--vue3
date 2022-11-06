@@ -108,7 +108,11 @@
   }
 
   &--white {
-      color: var(--color-above-dark);
+    color: var(--color-above-dark);
+    &::after {
+        background-color: var(--color-above-dark);
+    }
+    
   }
 }
 
