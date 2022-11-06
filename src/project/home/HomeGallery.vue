@@ -3,10 +3,10 @@
 </script>
 
 <template>
-  <section class="p-home-gallary c-section">
+  <section class="p-home-gallery c-section">
     <h2 class="title-2">Gallary<span class="title-2__ja">ギャラリー</span></h2>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil quia ipsam fugiat soluta saepe voluptatibus illum dicta nulla libero sit?<br>Quos reprehenderit veniam alias beatae quod, iusto consequuntur fuga saepe.</p>
-    <ul class="p-home-gallary__panel">
+    <ul class="p-home-gallery__panel">
       <li><img src="/img/placehold.png" alt="" width="485" height="240"></li>
       <li><img src="/img/placehold.png" alt="" width="485" height="240"></li>
       <li><img src="/img/placehold.png" alt="" width="485" height="240"></li>
@@ -19,7 +19,7 @@
 </template>
 
 <style scoped lang="scss">
-  .p-home-gallary {
+  .p-home-gallery {
 
     &__panel {
       display: flex;

@@ -2,9 +2,15 @@
 
 .c-section {
   padding: 50px 2vw;
+  
   &--secondary {
     background: var(--gray-5);
   }
+
+  &--third {
+    background: var(--gray-8);
+  }
+
   @include g.mq-up(m) {
     padding: 50px 3vw;
   }
