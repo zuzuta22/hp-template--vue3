@@ -3,10 +3,10 @@
 </script>
 
 <template>
-  <section class="p-home-gallary">
-    <h2>Gallary<span>ギャラリー</span></h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil quia ipsam fugiat soluta saepe voluptatibus illum dicta nulla libero sit? Quos reprehenderit veniam alias beatae quod, iusto consequuntur fuga saepe.</p>
-    <ul class="p-home-gallary-panel">
+  <section class="p-home-gallary c-section">
+    <h2 class="title-2">Gallary<span class="title-2__ja">ギャラリー</span></h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil quia ipsam fugiat soluta saepe voluptatibus illum dicta nulla libero sit?<br>Quos reprehenderit veniam alias beatae quod, iusto consequuntur fuga saepe.</p>
+    <ul class="p-home-gallary__panel">
       <li><img src="/img/placehold.png" alt="" width="485" height="240"></li>
       <li><img src="/img/placehold.png" alt="" width="485" height="240"></li>
       <li><img src="/img/placehold.png" alt="" width="485" height="240"></li>
@@ -21,10 +21,29 @@
 <style scoped lang="scss">
   .p-home-gallary {
 
-    &-panel {
+    &__panel {
       display: flex;
         flex-wrap: wrap;
-      gap: 5px; // TODO: これ仮で入れてるだけ。ちゃんと調整する。
+      padding-top: 60px;
+      gap: 5px;
+      width: 100%;
+
+      & li {
+        width: 100%;
+        min-height: 240px;
+        @include mq-up(xs) {
+          width: calc((100% - 5px) / 2);
+        }
+        @include mq-up(m) {
+          width: calc((100% - 10px) / 3);
+        }
+
+        & img {
+          object-fit: cover;
+          width: auto;
+          height: 100%;
+        }
+      }
     }
   }
-</style>1860 780
+</style>
