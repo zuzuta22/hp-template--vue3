@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section class="p-home-service p-section p-section--secondary">
+  <section class="p-home-service c-section c-section--secondary">
     <h2 class="title-2">SERVICE<span class="title-2__ja">サービス案内</span></h2>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam soluta dolore minus ducimus, perspiciatis atque enim placeat suscipit, saepe culpa, non abdelectus deleniti sunt assumenda fugiat rerum tenetur incidunt.

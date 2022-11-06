@@ -1,32 +1,64 @@
-@use "../main/global" as g;
+@use "../global/" as g;
 
 :root {
-    /* color */
-    // Theme color
-    --color-theme-primary: #12cd77;
-    --color-theme-primary-alpha: rgb(18 205 119 / 50%);
-    --color-theme-primary-deep: #16cd12;
-    --color-theme-primary-deep-alpha: rgb(22 205 18 / 50%);
-    --color-theme-primary-bright: #89fc9b;
-    --color-theme-primary-pale: #a6db33;
-    --color-theme-primary-pale-alpha: rgb(166 219 51 / 80%);
-    --color-theme-primary-grad: linear-gradient(135deg, var(--color-theme-primary), var(--color-accent-attention));
+  /* color */
+  // Theme color
+  --color-theme-primary: #12cd77;
+  --color-theme-primary-alpha: rgb(18 205 119 / 50%);
+  --color-theme-primary-deep: #16cd12;
+  --color-theme-primary-deep-alpha: rgb(22 205 18 / 50%);
+  --color-theme-primary-bright: #89fc9b;
+  --color-theme-primary-pale: #a6db33;
+  --color-theme-primary-pale-alpha: rgb(166 219 51 / 80%);
+  --color-theme-primary-grad: linear-gradient(135deg, va(--color-theme-primary), var(--color-accent-attention));
 
-    --color-theme-secondary: #f53d3d;
+  --color-theme-secondary: #f53d3d;
 
-    --color-theme-tertiary: #ff911c;
-    --color-theme-tertiary-deep: #fd644f;
-    --color-theme-tertiary-grad: linear-gradient(135deg, var(--color-theme-tertiary-deep), var(--color-theme-tertiary));
+  --color-theme-tertiary: #ff911c;
+  --color-theme-tertiary-deep: #fd644f;
+  --color-theme-tertiary-grad: linear-gradient(135deg, va(--color-theme-tertiary-deep), var(--color-theme-tertiary));
 
-    --color-theme-quaternary: #00a0e9;
-    --color-theme-quaternary-grad: linear-gradient(135deg, var(--color-theme-quaternary), var(--color-theme-primary-bright));
+  --color-theme-quaternary: #00a0e9;
+  --color-theme-quaternary-grad: linear-gradient(135deg, va(--color-theme-quaternary), var(--color-theme-primary-bright));
 
-    // Base color
-    --color-base: #333;
-    --color-base-light: #ccc;
-    --color-base-pale: #ddd;
-    --color-base-bright: #f5f5f5;
-    --color-base-white: #fff;
+  // Base color
+  --color-base: #333;
+  --color-base-light: #ccc;
+  --color-base-pale: #ddd;
+  --color-base-bright: #f5f5f5;
+  --color-base-white: #fff;
+  --color-base-dark: #aaa;
+
+  // shades - generated using chroma.js - 12 steps
+  --black: #1d1d21;
+  --gray-10: #2e2e31;
+  --gray-6: #555;
+  --gray-6: #7b7a7d;
+  --gray-5: #f5f5f5;
+  --gray-4: #a5a5a6;
+  --gray-3: #bbbbbc;
+  --gray-2: #d1d0d2;
+  --gray-1: #e8e7e8;
+  --white: white;
+
+  /* typography */
+  --color-text: var(--gray-10);
+  --color-text-heading: var(--black);
+  --color-text-subtle: var(--gray-6);
+  --color-link: var(--color-primary);
+  --color-link-visited: var(--color-primary-dark);
+  --color-mark: var(--color-accent-bg);
+  --color-blockquote-border: var(--gray-2);
+
+  /* body */
+  --color-body: var(--white);
+
+  /* border */
+  --color-border: var(--gray-2);
+
+  /* icons */
+  --color-icon-primary: var(--gray-4);
+  --color-icon-secondary: inherit;
 
     // Accent color
     --color-accent-attention: #f1fa61;
@@ -40,47 +72,44 @@
     --color-use-bg: var(--color-accent-info);// 背景
     --color-above-dark: var(--color-base-white);// 濃色上の色
 
-    /* width */
-    --content-width-small: #{g.$width_small + px};
-    --content-width-basic: #{g.$width_basic + px};
-    --content-width-large: #{g.$width_large + px};
+  /* width */
+  --content-width-small: #{g.$width_small + px};
+  --content-width-basic: #{g.$width_basic + px};
+  --content-width-large: #{g.$width_large + px};
 
-    /* space */
-    --line-height: #{g.$line_height};
+  /* space */
+  --line-height: #{g.$line_height};
 
-    --section: #{g.auto_clamp(80,150,g.$bp_xl)};
-    --section-2nd: #{g.auto_clamp(60,90,g.$bp_xl)};
+  --section: #{g.auto_clamp(80,150,g.$bp_xl)};
+  --section-2nd: #{g.auto_clamp(60,90,g.$bp_xl)};
 
-    --margin-xxs: #{g.auto_min(10,g.$bp_xs)};
-    --margin-xs: #{g.auto_min(20,g.$bp_s)};
-    --margin-s: #{g.auto_min(30,g.$bp_s)};
-    --margin-m: #{g.auto_min(40)};
-    --margin-l: #{g.auto_min(50)};
-    --margin-xl: #{g.auto_min(60)};
+  --margin-xxs: #{g.auto_min(10,g.$bp_xs)};
+  --margin-xs: #{g.auto_min(20,g.$bp_s)};
+  --margin-s: #{g.auto_min(30,g.$bp_s)};
+  --margin-m: #{g.auto_min(40)};
+  --margin-l: #{g.auto_min(50)};
+  --margin-xl: #{g.auto_min(60)};
 
-    // 余白設定（ラッパーが異なるコンテンツのツラを揃える）
-    // --wrapper-space: max(var(--margin-m),calc((100% - var(--content-width-basic)) / 2));
+  /* more */
+  --sub-font: 'Montserrat', sans-serif;
+  --sub-font-letter-spacing: .05em;
 
-    /* more */
-    --sub-font: 'Montserrat', sans-serif;
-    --sub-font-letter-spacing: .05em;
+  --radius: #{g.auto_min(10,g.$bp_m)};
+  --radius-s: calc(var(--radius) / 2);
+  --radius-m: calc(var(--radius) * 2);
+  --radius-l: calc(var(--radius) * 5);
+  --radius-xl: calc(var(--radius) * 20);
+  --radius-oval: 9999px;
 
-    --radius: #{g.auto_min(10,g.$bp_m)};
-    --radius-s: calc(var(--radius) / 2);
-    --radius-m: calc(var(--radius) * 2);
-    --radius-l: calc(var(--radius) * 5);
-    --radius-xl: calc(var(--radius) * 20);
-    --radius-oval: 9999px;
+  --duration: .3s;
+  --box-shadow: 0 0 var(--margin-xs) rgba(0, 0, 0, .1);
 
-    --duration: .3s;
-    --box-shadow: 0 0 var(--margin-xs) rgba(0, 0, 0, .1);
+  --header-desc-height: 30px;
+  --header-height: 70px;
 
-    --header-desc-height: 30px;
-    --header-height: 70px;
+  @include g.mq-up(xl) {
+    --header-height: 80px;
+  }
 
-    @include g.mq-up(xl) {
-        --header-height: 80px;
-    }
-
-    --footer-space: #{g.auto_min(80)};
+  --footer-space: #{g.auto_min(80)};
 }
