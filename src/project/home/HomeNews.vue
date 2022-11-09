@@ -53,6 +53,7 @@ const news = ref([
   .p-home-news {
     display: flex;
       flex-direction: column;
+      justify-content: space-between;
     position: relative;
 
     @include mq-up(m) {
@@ -69,7 +70,7 @@ const news = ref([
     &__content {
       @include mq-up(m) {
         margin-bottom: 0;
-        width: 65%;
+        width: 63%;
       }
     }
     &__btn-wrap {

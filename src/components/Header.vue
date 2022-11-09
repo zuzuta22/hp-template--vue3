@@ -56,7 +56,7 @@
     background-color: #fff;
     // display: none;
     // スクロールしたら表示させるようにする。
-    opacity: .6;
+    opacity: .8;
     width: 100%;
     max-width: var(--max-width);
     position: fixed;
